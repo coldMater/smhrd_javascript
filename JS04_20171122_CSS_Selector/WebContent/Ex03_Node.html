@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<ul id="list">
+		<li>JAVA</li>
+<!-- 		아래 태그들을 Element 제어를 통해서 생성해보자. -->
+<!-- 		<li>CSS</li> -->  
+<!-- 		<li>JavaScript</li> -->
+	</ul>
+	
+<script type="text/javascript">
+	// 	<li>CSS</li> Element 추가하기
+	//1. 추가하고자 하는 대상(부모) 찾기
+	var ul = document.getElementById("list");
+	
+	//2. 요소를 생성
+	var new_li = document.createElement("li");
+	var new_txt = document.createTextNode("CSS");
+	
+	//3. 노드 객체 추가
+	new_li.appendChild(new_txt);
+	ul.appendChild(new_li);
+	
+	// 	<li>CSS</li> Element 추가하기
+	var new_li2 = document.createElement("li");
+	var new_txt2 = document.createTextNode("JavaScript");
+	
+	new_li2.appendChild(new_txt2);
+	ul.appendChild(new_li2);
+</script>
+
+	
+</body>
+</html>

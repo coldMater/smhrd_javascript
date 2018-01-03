@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="" name = "f">
+		DATA : <input type="text" name = "data" value =""/><br />
+		<select name="sel" id="">
+			<option>점심메뉴선택</option>
+			<option value = "맘스터치">맘스터치</option>
+			<option value = "중국집">중국집</option>
+			<option value = "난타5000">난타5000</option>
+			<option value = "백반">백반</option>
+		</select>
+		<input type="submit" value = "전송" onclick = "show()" />
+	</form>
+	
+	<script type="text/javascript">
+		function show(){
+			var name = document.f.data;
+			alert("입력 값 : " + name.value);
+			
+			var sel = document.f.sel;
+			var chosenIndex = sel.selectedIndex;
+			alert(sel.options[chosenIndex].value);
+			
+		}
+	</script>
+</body>
+</html>

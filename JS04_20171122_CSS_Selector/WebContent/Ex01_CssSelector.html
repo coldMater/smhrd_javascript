@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<style>
+
+/* 	item1 을 검색하는 방법은 다음과 같은 방법들이 있다. */
+/* 	JavaScript 의 document.querySelector() 는 CSS 선택자 형태로 찾을 수 있다.  */
+
+
+#item1{}
+li#item1{}
+#list > #item1{}
+#list > li#item{}
+ul > #item1{}
+ul > li#item1{}
+ul#list > #item1{}
+ul#list > li#item1{}
+
+</style>
+
+</head>
+<body>
+	<ul id = "list">
+		<li id = "item1">HTML</li>
+		<li>CSS</li>
+		<li>JavaScript</li>
+	</ul>
+	
+	<ol id="id2">
+		<li id="item2">Java</li>
+		<li>Python</li>
+		<li>R</li>
+	</ol>
+	
+	<ul id="id3">
+		<li id="item3">BigData</li>
+		<li>JSP/Servlet</li>
+		<li>MachineLearning</li>
+	</ul>
+	
+	<button onclick="changeColor()">색상변경</button>
+		
+	<script>
+	var item1Obj = document.getElementById("item1");
+	var item1ObjByQS = document.querySelector("ul > #item1");
+	var liTagObjsByQSA = document.querySelectorAll("ul > li");
+	
+	function changeColor(){	
+		item1Obj.style.color = "red";
+	}
+	
+	alert("item1ObjByQS.innerHTML : \n"+item1ObjByQS.innerHTML);
+	alert("liTagObjsByQS[1].innerHTML : \n"+liTagObjsByQSA[1].innerHTML);
+	
+	var lisObj = document.querySelectorAll("#id2 > li");
+	alert(lisObj[2].innerHTML);
+	
+	// ul 객체의 li 태그를 객체로 호출
+	var uls = document.querySelectorAll("ul");
+	var lis = uls[0].querySelectorAll("li");
+	alert(lis[1].innerHTML);
+	
+	
+	
+	</script>
+
+</body>
+</html>

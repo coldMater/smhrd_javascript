@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h3>대화상자 표현하기</h3>
+<script type="text/javascript">
+/*대화상자
+
+ 1.alert() : 경고창
+ 2.prompt() : 입력창
+ 3.confirm() : 확인/취소 창
+
+*/
+
+/* 1 */
+alert('지금부터 각종 대화상자를 띄워볼겁니다.');
+
+/* 2 */
+var num = prompt("다음 입력 값이 화면에 표시됩니다. 입력된 값은 모두 string type 입니다.","값을 입력해주세요");
+document.write(num);
+document.write("<br>");
+document.write("Prompt 창으로 입력한 값의 Type : "+ typeof(num));
+
+/* 3 */
+var con = confirm("Confirm 창입니다. 확인/취소에 따라 boolean type 의 결과를 반환합니다.")
+document.write(con);
+document.write("<br>");
+document.write("Confirm 창의 결과 : " + typeof(con));
+</script>
+
+<br /><br />
+
+<h3>숫자 받아 더하기</h3>
+<script>
+var num1 = prompt("더할 첫 번째 숫자");
+var num2 = prompt("더할 두 번째 숫자");
+
+document.write("<h6>타입변환 전</h6>")
+document.write(num1+"+"+num2+"=");
+document.write(num1+num2)
+
+document.write("<h6>타입변환 후</h6>")
+document.write(num1+"+"+num2+"=");
+document.write(parseFloat(num1)+parseFloat(num2))
+</script>
+
+<h5>※ prompt 로 입력받은 값은 모두 String 이므로 타입 변환을 해주어야 한다. </h5>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<script>
+
+	function callAjax(){
+		
+		$.ajax({
+			  url: "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=430156241533f1d058c603178cc3ca0e&targetDt=20171112",
+			  success: function(result) {
+				 
+				  var movieInfoArr = result.boxOfficeResult.dailyBoxOfficeList;
+				  /* 해당 attribute 의 깊이가 깊은 경우 위와 같이 변수에 한번 담아 사용하자.*/ 
+				  for(var i = 0; i<movieInfoArr.length;i++){
+					  document.write((i+1)+"위 : ");
+					  document.write(movieInfoArr[i].movieNm);
+					  document.write("<br>")
+				  }
+			  }
+			});
+		}
+
+</script>
+
+<button onclick="callAjax()">callAjax()</button>
+</body>
+</html>

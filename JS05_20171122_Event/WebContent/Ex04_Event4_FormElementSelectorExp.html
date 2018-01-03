@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3>이메일 입력</h3>
+	<form action="" name = "f">
+	
+		<input type="text" name = "email_id"/> @ <input type="text" name = "email_domain" readOnly/>
+		
+		<select name="emailSelect" id="" onchange = "emailSelection()">
+		
+			<option value="">선택</option>
+			<option value="naver.com">네이버</option>
+			<option value="google.com">구글</option>
+			<option value="daum.net">다음</option>
+			<option value="in">직접입력</option>
+			
+		</select>
+	
+	</form>
+	
+	<script type="text/javascript">
+		var email_domain = document.f.email_domain;
+		var emailSelected = document.f.emailSelect;
+
+		
+		var email_id = document.f.email_id;
+		var regex = /[a-z]{3}/; //a부터 z 사이의 모든 문자 3글자
+		
+		function emailSelection(){
+
+			var index = emailSelected.selectedIndex;
+			
+			alert(index);
+/* 			alert(emailSelected.options[index].value);
+			if(emailSelected.options[index].value == "in"){
+				email_domain.readOnly = false;
+				email_domain.value = "";
+			} else {
+				email_domain.readOnly = true;
+				email_domain.value = emailSelected.options[index].value;
+			} */
+
+		}
+		
+		
+		
+	</script>
+</body>
+</html>

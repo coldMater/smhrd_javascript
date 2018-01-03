@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+	
+		var jsonStr = '{"info":{"name":"hhd","age":12}, "tel":"01022253214"}';
+		var jsonObj = JSON.parse(jsonStr);
+		
+		/* 위 JSON 의 name, age 꺼내기 */
+		
+		/* 방법 1 */
+		document.write(jsonObj['info']['name']+"<br>");
+		document.write(jsonObj['info']['age']+"<br>");
+		document.write(jsonObj['tel']+"<br>");
+		document.write("<br><br>");
+		
+		/* 방법2 */
+		document.write(jsonObj.info.name+"<br>");
+		document.write(jsonObj['info'].age+"<br>");
+		document.write(jsonObj.tel+"<br>");
+		
+	</script>
+	
+	
+</body>
+</html>

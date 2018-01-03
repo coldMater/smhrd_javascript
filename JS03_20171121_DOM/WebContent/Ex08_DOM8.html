@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<style>
+
+#box{
+
+width: 100px;
+height: 100px;
+background-color: steelblue;
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="box">
+</div>
+
+<button onclick="square()">정사각형</button>
+<button onclick="circle()">원</button>
+<button onclick="ractangle()">직사각형</button>
+
+<script type="text/javascript">
+	var boxObj = document.getElementById("box");
+
+	function square(){
+		boxObj.style.width = "100px";
+		boxObj.style.height = "100px";
+		boxObj.style.borderRadius = "0%";
+	}
+	
+	function circle(){
+		boxObj.style.borderRadius = "50%";
+	}
+	
+	function ractangle(){
+		boxObj.style.width = Math.random()*100+"px";
+		boxObj.style.height = Math.random()*100+"px";
+		boxObj.style.borderRadius = "0%";
+	}
+	
+</script>
+
+
+</body>
+</html>

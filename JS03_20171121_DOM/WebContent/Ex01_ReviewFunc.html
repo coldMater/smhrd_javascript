@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<button onclick = "funcRan()">난수생성</button>
+<button onclick = "funcRan2()">문구생성</button>
+<button onclick = "randMaxMin(3)">난수최대최소값</button>
+<script type="text/javascript">
+	// 버튼을 클릭했을 때, 랜덤으로 숫자출력
+	// 자바 스크립트 수학 객체  Math.random() : 0~1까지
+	function funcRan(){
+		var ran = Math.random();
+		var ran2 = parseInt(Math.random()*5);
+		alert("Math.random();\n"+ran);
+		alert("parseInt(Math.random()*5);\n"+ran2);
+	}
+	// 버튼을 클릭했을 때, 랜덤으로 문장 출력.
+	// "안녕하세요?", "날씨가 많이 춥죠?", "따뜻한 물 많이 드세요."
+
+	var arr = ["안녕하세요.","날씨가 많이 춥죠?","따뜻한 물 많이 드세요."];
+			
+	function funcRan2(){
+		var ran2 = parseInt(Math.random()*arr.length);
+		alert(arr[ran2]);
+	}
+	
+	function randMaxMin(n){
+		max = 0;
+		min = 10;
+		zero = 0;
+		one = 0;
+		two = 0;
+		for(var i = 0; i<10000; i++){
+			ran = parseInt(Math.random()*n);
+			if(ran>max){
+				max = ran;
+			}
+			if(ran<min){
+				min = ran;
+			}
+			if (ran==0)zero++;
+			if (ran==1)one++;
+			if (ran==2)two++;
+			
+		}
+		alert("최대 : "+max+"\n최소: "+min);
+		var sum = zero+one+two;
+		alert("0: "+zero+"\n1: "+one+"\n2: "+two);
+		alert("0: "+((zero/sum)*100)+"%\n1: "+((zero/sum)*100)+"%\n2: "+((zero/sum)*100)+"%")
+	}
+	
+</script>
+</body>
+</html>

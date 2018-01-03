@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	R: <input type="text" value = "" placeholder="0~f"><br>
+	G: <input type="text" value = "" placeholder="0~f"><br>
+	B: <input type="text" value = "" placeholder="0~f"><br>
+	
+	<button onclick="bgColorChange()">배경색 변경</button>
+	
+	<script type="text/javascript">
+		 
+		var inputObjs = document.getElementsByTagName("input");
+		var bodyObjs = document.getElementsByTagName("body");
+		
+		function bgColorChange(){
+ 			var R = inputObjs[0].value;
+ 			var G = inputObjs[1].value;
+ 			var B = inputObjs[2].value;
+			bodyObjs[0].style.backgroundColor = "#"+R+G+B;
+			//주의 : getElements~ 는 객체를 배열 형태로 불러온다.
+		}
+
+	</script>
+</body>
+</html>

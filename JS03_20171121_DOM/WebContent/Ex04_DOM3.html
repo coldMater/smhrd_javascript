@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3>텍스트 필드의 값을 불러오기</h3>
+	<input type="text" id="text"/>
+	<button onclick="show()">클릭</button>
+	
+	<h3>텍스트 필드에 자동으로 값을 입력하기</h3>
+	<input type="text" id="text2"/>
+	<button onclick="show2()">클릭</button>
+	
+	<script type="text/javascript">
+		
+		function show(){
+			var inputObj = document.getElementById("text");
+			alert(inputObj.value);
+		}
+		
+		function show2(){
+			var inputObj2 = document.getElementById("text2");
+			inputObj2.value = "안녕하세요! 라는 글씨가 버튼을 누르자 입력되었다.";
+		}
+		
+		
+	</script>
+	
+
+	
+</body>
+</html>

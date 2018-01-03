@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+<button onclick="show()">function</button>
+<button onclick="show2('abc')">function(parameter)</button>
+<button onclick="show3(1)">function(return)</button>
+<button onclick="variable(1,'하핫')">가변인자 함수</button>
+<button onclick="variable_length(1,'하핫',2.3,'yes','length')">가변인자 함수</button>
+
+<script type="text/javascript">
+
+	function show(){
+		alert("데헷");	
+	}
+	
+	function show2(msg,num){
+		alert("넘겨받은 값 : "+msg+"/"+num);	
+	}
+	
+	function show3(num){
+		var str = returnFunc(num);
+		alert("return 값 : "+str);
+	}
+	
+	function returnFunc(msg){
+		return msg;
+	}
+
+	function variable(){
+		alert("arguments값:"+arguments[0]+"/"+arguments[1]);
+	}	
+
+    function variable_length(){
+        for(var i =0; i<arguments.length;i++){
+            alert(arguments[i]);
+        }
+    }
+
+	
+</script>
+</body>
+</html>

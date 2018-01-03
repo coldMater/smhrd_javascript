@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+
+		var jsonStr = '{"pokemon":[{"name":"파이리","height":130},'+
+								  '{"name":"꼬부기","height":170}]}';
+		var jsonObj = JSON.parse(jsonStr);
+		
+		for(var i = 0; i<jsonObj.pokemon.length;i++){
+			document.write(jsonObj.pokemon[i].name+"&nbsp&nbsp");
+			document.write(jsonObj.pokemon[i].height+"<br>");
+		}
+				
+	</script>
+
+</body>
+</html>

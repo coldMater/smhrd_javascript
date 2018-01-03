@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<style>
+
+	table{width: 300px;}
+	table,td{border: 1px solid black; border-collapse: collapse;}
+	tr:first-child {background-color :firebrick; text-align:center; color:white; font-weight : bold;}
+
+</style>
+<title>Insert title here</title>
+</head>
+<body>
+	<input type="text" />
+	<button onclick = "addList()">항목추가</button>
+	<br /><br /><br />
+	<table>
+		<tr>
+			<td>오늘 할 일</td>
+		</tr>
+	</table>
+	
+	<script type="text/javascript">
+		var i = 0;
+	
+		function addList(){
+			var inputTag = document.querySelector("input");
+			var tableTag = document.querySelector("table");
+			
+			var new_txt_Node = document.createTextNode((++i)+". "+inputTag.value);
+			var new_td_Node = document.createElement("td");
+			var new_tr_Node = document.createElement("tr");
+			
+			new_td_Node.appendChild(new_txt_Node); //<td>요소내용</td>
+			new_tr_Node.appendChild(new_td_Node);  //<tr><td>요소내용</td></tr>
+			tableTag.appendChild(new_tr_Node);	   //<table><td>요소내용</td></table>
+			
+		}
+	
+	</script>
+	
+</body>
+</html>

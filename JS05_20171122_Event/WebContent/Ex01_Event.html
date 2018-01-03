@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<style>
+	div{width: 100px;height: 100px;background-color: limegreen;}
+</style>
+<title>Insert title here</title>
+</head>
+<body>
+
+<div onmouseup="alert('클릭')" onmouseover="alert('상자위')" onmouseleave = "alert('벗어남')"></div>
+
+<input type="text" onblur="alert('Focus해제(Onblur)')"/>
+<button onclick="inputFocus()">포커스</button>
+
+
+<script type="text/javascript">
+	var inputTag = document.querySelector("input");
+
+	function inputFocus(){
+		inputTag.focus();
+	}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3>/* 1부터 100까지 출력하고 해당 숫자를 합쳐보기*/</h3>
+	<script>
+		var sum=0;
+		for(var i = 1;i<101;i++){
+			document.write(i+"&nbsp&nbsp&nbsp&nbsp");
+			document.write((sum+=i)+"<br>");
+		}
+	</script>
+	
+	<h3>/* 짝수만 나오게 하기(조건문 쓰지 않고) */</h3>
+	<script>
+		for(var i = 2;i<101;i+=2){
+			document.write(i+"<br>");
+		}
+	</script>
+	
+	<h3>/* 369게임 */</h3>
+		<script>
+		for(var i = 2;i<101;i++){
+			/* place value */
+			var units = i%10;
+			var tens = i-units;
+			var double = true;
+			
+			if(units==3 || units ==6 || units ==9){
+				document.write("짝");
+				var double = false;
+			} 
+			if(tens == 30 || tens == 60 || tens == 90){
+				document.write("짝");
+				var double = false;
+			}
+			
+			if(double){
+				document.write(i);	
+			}
+						
+			document.write("<br>")
+			
+		}
+		
+	</script>
+	
+	<h3>/* 369게임(명진쌤의 해법) */</h3>
+	<script>
+		for(var i = 2;i<101;i++){
+			/* place value */
+			var units = i%10;
+			var tens = parseInt(i/10);
+			var isUnitsClap = (units==3 || units ==6 || units ==9);
+			var isTensClap = (tens == 3 || tens == 6 || tens == 9);
+
+			var double = true;
+			
+			if(isTensClap && isUnitsClap){
+				document.write("짝짝");
+			} else if(isTensClap || isUnitsClap) {
+				document.write("짝");
+			} else {
+				document.write(i);	
+			}
+					
+			document.write("<br>")
+			
+		}
+		
+	</script>
+</body>
+</html>

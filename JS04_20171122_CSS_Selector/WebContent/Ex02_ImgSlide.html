@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+	#slideBox{position: relative; width: 500px; margin: 0 auto;}
+	input{}
+	#left{position: absolute; top:50%; left:0px; border:0px;
+		   width:30px; height:30px;
+		   border-radius: 50%; background-color: rgba(0,0,0,0.5);}
+	#right{position: absolute; top:50%; right:0px; border:0px;
+		   width:30px; height:30px;
+		   border-radius: 50%; background-color: rgba(0,0,0,0.5);}
+	#left:hover{box-shadow: 0px 2px 5px rgba(0,0,0,0.8);}
+	#left:active{box-shadow: 0px 2px 5px rgba(0,0,0,0.8) inset;}
+	
+	#right:hover{box-shadow: 0px 2px 5px rgba(0,0,0,0.8);}
+	#right:active{box-shadow: 0px 2px 5px rgba(0,0,0,0.8) inset;}
+	.mySlides{width: 500px; height: 300px;}
+</style>
+</head>
+<body>
+<div id="slideBox">
+	<img src="img/ryan1.jpg" alt="" class="mySlides" />
+	<img src="img/ryan2.jpg" alt="" class="mySlides" />
+	<img src="img/ryan3.jpg" alt="" class="mySlides" />
+	<img src="img/ryan4.jpg" alt="" class="mySlides" />
+	<img src="img/ryan5.jpg" alt="" class="mySlides" />
+	<img src="img/ryan6.jpg" alt="" class="mySlides" />
+	<img src="img/ryan7.jpg" alt="" class="mySlides" />
+	<img src="img/ryan8.jpg" alt="" class="mySlides" />
+	<img src="img/ryan9.jpg" alt="" class="mySlides" />
+	<img src="img/ryan10.jpg" alt="" class="mySlides" />
+	<img src="img/ryan11.jpg" alt="" class="mySlides" />
+	<img src="img/ryan12.jpg" alt="" class="mySlides" />
+	<img src="img/ryan13.jpg" alt="" class="mySlides" />
+	<img src="img/ryan14.jpg" alt="" class="mySlides" />
+
+<input id="left" type="button" value="◀" onclick = "slide(-1)"> 
+<input id="right" type="button" value="▶" onclick = "slide(1)">
+</div>
+
+<script>
+	var imgs = document.querySelectorAll("img.mySlides");
+	var index = 0; //->
+	slide(index);
+	
+	function slide(num){
+		//이미지 숨기기
+		for(var i =0; i<imgs.length;i++){
+			imgs[i].style.display = "none";	
+		}	
+		//요청 index 설정
+		index += num;
+		
+		//최대 최소 index 제어
+		if(index<0)	index = imgs.length-1;
+		if(index>imgs.length-1)	index = 0;
+
+		//해당 index 이미지 출력
+		imgs[index].style.display = "block";
+	}	
+
+	//시간에 따른 자동 슬라이드
+	setInterval(() => {
+		index += 1;
+		slide(index);
+	}, 3000);
+
+</script>
+
+</body>
+</html>

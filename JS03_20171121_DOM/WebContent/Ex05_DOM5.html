@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<img id = "img" src="img/ryan.gif">
+	<h3>img.src = "img/ryan2.gif"</h3>
+	<button onclick="change()">이미지 변경1</button>
+	<h3>img.setAttribute("src"","img/ryan.gif");</h3>
+	<button onclick="changeByAttribute()">이미지 변경2</button>
+	
+	<script type="text/javascript">
+	
+		var imgObj = document.getElementByID("img");
+		
+		
+		//Method01.
+		//Element.attributeName = "demandedValue";
+		function change(){
+			//Element.attributeName
+			img.src = "img/ryan2.gif";
+		}
+		
+		//Method02.
+		//Element.setAttribute(AttributeName,"demandedValue");
+		function changeByAttribute(){
+			img.setAttribute("src","img/ryan.gif");		
+		}
+	
+	
+	</script>
+</body>
+</html>

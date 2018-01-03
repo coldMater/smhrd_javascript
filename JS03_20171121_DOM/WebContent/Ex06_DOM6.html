@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+p{
+
+}
+</style>
+
+</head>
+
+
+
+
+<body>
+		<p id="text">Hello JavaScript</p>
+		<button onclick="sizeChange()">size 변경</button>
+		<button onclick="weightChange()">weight 변경</button>
+		<button onclick="colorChange()">color 변경</button>
+		
+		<script type="text/javascript">
+			
+			var pTag = document.getElementById("text");
+		
+			function sizeChange(){
+				pTag.style.fontSize = "40px";
+			}
+			
+			function weightChange(){
+				pTag.style.fontWeight = "bold";
+			}
+			
+			function colorChange(){
+				pTag.style.color = "steelblue";
+			}
+			
+		</script>
+</body>
+</html>

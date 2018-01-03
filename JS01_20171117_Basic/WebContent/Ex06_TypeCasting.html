@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+
+	document.write("형변환");
+	document.write("<br>");
+	document.write("정수형 형변환 >> " + typeof(parseInt("5")))
+	document.write("<br>");
+	document.write("실수형 형변환 >> " + typeof(parseFloat("4.5")))
+	document.write("<br>");
+	document.write("number형 형변환 >> " + typeof(Number("45.54")))
+	/* 보여지는 자료형은 number 이지만 캐스팅한 해당 타입으로사용할 수가 있다. */
+	document.write("<br>");
+	document.write("문자형 형변환 >> " + typeof(String("45.54")))
+	document.write("<br>");
+	
+	document.write("문자+숫자데이터의 형변환(parseInt(\"5원\") >> " + parseInt("5원"))
+	document.write("<br>");
+	document.write("문자+숫자데이터의 형변환(Number(\"45.54원\")) >> " + Number("45.54원"))
+	document.write("<br>");
+	/* parseInt() 는 주어진 값에서 문자를 제외시킨다. */
+	/* number() 는 주어진 값에 문자가 있으면 Not a Number 오류를 출력한다. */
+	
+	document.write("일"=="일") //true
+	document.write("<br>");
+	document.write("1"==1) //true
+	document.write("<br>");
+	document.write("1"===1) //false
+	document.write("<br>");
+	document.write("1"!==1) //true (값은 같은데 타입이 다른경우)
+	document.write("<br>");
+	document.write("1"!=="2") //true (값은 다른데 타입이 같은경우)
+
+</script>
+<br /><br /><br />
+<h3>Type Casting 실습</h3>
+<script type="text/javascript">
+var ballCount = 33;
+var boxSize = 5;
+var boxCount;
+
+boxCount = parseInt(ballCount/boxSize) + ((ballCount%boxSize)==0?0:1);
+document.write("\
+				<table border='solid black 1px'>\
+					<tr>\
+						<td>현재 공의 갯수</td>\
+						<td>"+ballCount+"</td>\
+					</tr>\
+					<tr>\
+						<td>상자의 크기</td>\
+						<td>"+boxSize+"</td>\
+					</tr>\
+					<tr>\
+						<td>현재 공을 담을 수 있는 상자 수</td>\
+						<td>"+boxCount+"</td>\
+					</tr>\
+				</table>\
+				");
+</script>
+
+</body>
+</html>

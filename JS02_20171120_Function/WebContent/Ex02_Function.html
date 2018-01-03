@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+		var num1 = Number(prompt("첫 번째 정수 :",0));	
+		var num2 = Number(prompt("두 번째 정수 :",0));
+		
+		oper(num1,num2)
+		
+		function oper(num1,num2){
+			var plus = num1 + num2;
+			var minus = num1 - num2;
+			var multiply = num1 * num2;
+			var divide = num1 / num2;
+			
+			alert("+ : "+plus+"\n- : "+minus+"\n× : "+multiply+"\n÷ : "+divide)
+		}
+	</script>
+</body>
+</html>

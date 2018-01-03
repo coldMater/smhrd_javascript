@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<script>
+
+	function callAjax(){
+		
+		$.ajax({
+			  url: "/api/getWeather",
+			  data: {
+			    zipcode: 97201
+			  },
+			  success: function( result ) {
+			    $( "#weather-temp" ).html( "<strong>" + result + "</strong> degrees" );
+			  }
+			});
+		/* 본 코드는 [http://jquery.com/] 의 최하단에 있었다. */
+		/* 오류가 발생한다. 당연하다. 해당 API 가 없기 현재 컴퓨터에는 없기 때문. */
+	}
+
+</script>
+
+<button onclick="callAjax()">callAjax()</button>
+
+</body>
+</html>

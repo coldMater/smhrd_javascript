@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<p id="target">0</p>
+
+<button onclick="plus()">1증가(+)</button>
+<button onclick="minus()">1감소(-)</button>
+
+<script type="text/javascript">
+	var pTagObj = document.getElementById("target");
+	
+	function plus(){
+
+		var result_plus = parseInt(pTagObj.innerHTML);
+		pTagObj.innerHTML = ++result_plus;
+	}
+
+	function minus(){
+		if(!(pTagObj.innerHTML<=0)){
+			var result_minus = parseInt(pTagObj.innerHTML);	
+			pTagObj.innerHTML = --result_minus;
+		}
+	}
+</script>
+</body>
+</html>

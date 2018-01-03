@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<p id = "text">Hello JavaScript</p>
+<button onclick="show()">클릭</button>
+
+<script>
+//버튼을 클릭했을 때  p 태그의 요소를 출력해보기
+function show(){
+	var pCon = document.getElementById("text").innerHTML;
+	document.getElementById("text").innerHTML = "Hi JS Language!";
+	
+}
+
+</script>
+
+</body>
+</html>

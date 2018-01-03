@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+Man <input type="radio" value="Man" Name = "gender"/>
+Girl <input type="radio" value ="Girl" Name = "gender"/>
+<br />
+<button onclick="showAllInput()">모든 input 판별</button>
+<br />
+<button onclick="checked()">check 판별</button> 
+<br />
+<button onclick="showValue()">성별 출력</button> 
+
+<script type="text/javascript">
+
+	var inputs = document.getElementsByTagName("input");
+
+	function showAllInput(){
+		
+		alert(inputs[0].value)
+		alert(inputs[1].value)
+		
+	}
+	
+	function checked(){
+		alert("Man: "+inputs[0].checked+"\nGirl: "+inputs[1].checked);
+// 		.checked 의 값은 boolean이다.
+	}
+	
+	function showValue(){
+		var genderObjs = document.getElementsByName("gender");
+
+		if(genderObjs[0].checked) {
+			alert(genderObjs[0].value);
+		}
+		if(genderObjs[1].checked) {
+			alert(genderObjs[1].value);
+		}
+	}
+	
+	
+</script>
+</body>
+</html>
